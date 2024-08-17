@@ -12,7 +12,10 @@ header {
     text-align: center;
 
 }
-
+.tourist-spots h3{
+    color: #49176f;
+    background-color: #000;
+}
 nav {
     background-image: url('/images/navkol.png');
     background-size: cover;
