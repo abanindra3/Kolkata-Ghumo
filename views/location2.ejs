@@ -1,0 +1,46 @@
+<%- include('layout', { title: 'ECO PARK', content: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/location.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ECO PARK</h1>
+        <a href="https://ecoparknewtown.com/" >OFFICIAL SITE</a>
+        <p>The site is spread across an area of 194 hectares (480 acres) and includes a 42-hectare (100 acres) water body with an island. The Central Business District (CBD) is located to the east of the site and one of the largest convention centres in the country, Biswa Bangla Convention Centre, has been built to its north.
+                With the replica of the 7 wonders of the world and many fun activities, its a place of great fun.
+        </p>
+
+        <!-- Photo gallery with rotating effect -->
+        <div class="photo-gallery">
+            <div class="photo-container">
+                <img src="/images/ecop.jpg"alt="ECO PARK Photo 1">
+                <img src="/images/ecop2.jpg" alt="ECO PARK Photo 2">
+                <img src="/images/ecop3.jpeg" alt="ECO PARK Photo 3">
+                <img src="/images/ecop4.jpg" alt="ECO PARK Photo 4">
+            </div>
+        </div>
+
+        <section class="details">
+            <h2>Details</h2>
+            <ul>
+                <li><strong>Opening Hours:</strong> Tuesday to Saturday: 2:30 PM - 8:30 PM Sundays and Public Holidays: 12:00 PM - 8:30 PM</li>
+                <li><strong>Entry Ticket:</strong> Entry Ticket Pricing for Eco Park Kolkata= Adult, INR 30. Child, INR 20</li>
+                <li><strong>Location:</strong> Major Arterial Road(South-East), Action Area II New Town, Kolkata, West Bengal 700156, India</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/js/scripts.js"></script> <!-- JavaScript for rotating effect -->
+</body>
+</html>
+` }) %>

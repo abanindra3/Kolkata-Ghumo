@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumo Kolkata</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <!-- <h1>Ghumo Kolkata</h1> -->
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#ai-itinerary">AI Tour Planner</a></li>
+                    <li><a href="#top-spots">Top Spots</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+        
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="info-section">
+            <div class="weather-update">
+                <h3>Live Weather in Kolkata</h3>
+                <div id="weather"></div>
+            </div>
+            <div class="news-update">
+                <h3>What's Happening in Kolkata</h3>
+                <div class="news-content">
+                    <p><strong>Event 1: Protest continue to increase around RG KAR Hospital!</strong></p>
+                    <p><strong>Event 2: New tram routes launched across the city.!</strong></p>
+                    <p><strong>Event 3: Kolkata Film Festival to start next week.!</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="helpline">
+            <h3>Helpline Numbers</h3>
+            <div class="numbershelpline">
+                <p>1091: Women Helpline</p>
+                <p>1098: Child Helpline</p>
+                <p>1097: Medical Help</p>
+                <p>100: Police</p>
+                <p>101: Fire Brigade</p>
+                <p>102: Ambulance</p>
+                <p>033-22143230/3024: Lalbazar Police Station </p>
+                <p> 033-23510620, 23510619:Central Blood Bank</p>
+                <p>033-22440101033-22440163/0170/6164 :FIRE STATION head office</p>
+                
+                
+                
+            </div>
+        </div>
+        <div class="infofacts">
+            <h3>Facts about the City of Joy</h3>
+            <div class="factsinfo">
+                <p>1. Kolkata is a Million Plus city</p>
+                <p>2. Kolkata was previously called Calcutta</p>
+                <p>3. The world’s busiest cantilever bridge is in Kolkata</p>
+                <p>4. Kolkata is home to The Great Banyan Tree</p>
+                <p>5. The Calcutta Polo Club is the world’s oldest polo club</p>
+                <p>6. The Kolkata tram network is the oldest in Asia</p>
+                <p>7. Kolkata hosts the world’s largest book fair</p>
+            </div>
+        </div>    
+    </div>
+    <section id="top-spots">
+    <main class="content">
+        <section class="tourist-spots">
+            <h2>Top Tourist Spots</h2>
+            <div class="spot-container">
+                <div class="spot active" id="spot1">
+                    <img src="/images/kolkata.jpg" alt="Location 1" class="spot-img">
+                    <div class="spot-overlay">
+                        <h3>Howrah Bridge</h3>
+                        <p>This Is The Famous Howrah Bridge...</p>
+                        <button onclick="window.location.href='/location1'">View More</button>
+                    </div>
+                </div>
+            
+                <div class="spot" id="spot2">
+                    <img src="/images/ecop.jpg" alt="Location 2" class="spot-img">
+                    <div class="spot-overlay">
+                        <h3>Eco Park 
+                  
+                        </h3>
+                        <p>ECO park has emerged as the top tourist spot lately...</p>
+                        <button onclick="window.location.href='/location2'">View More</button>
+                    </div>
+                </div>
+                <div class="spot" id="spot3">
+                    <img src="/images/laketown.jpg" alt="Location 3" class="spot-img">
+                    <div class="spot-overlay">
+                        <h3>Lake Town</h3>
+                        <p>This is the newly constructed Lake Town Clock Tower.ocated in Northern Kolkata, Lake Town is a plannedresidential colony along VIP Road...</p>
+                        <button onclick="window.location.href='/location3'">View More</button>
+                    </div>
+                </div>
+                <div class="spot" id="spot4">
+                    <img src="/images/ntgate.jpg" alt="Location 4" class="spot-img">
+                    <div class="spot-overlay">
+                        <h3>Biswa Bangla Gate</h3>
+                        <p>The newly constructed is in the Heart of New Town...</p>
+                        <button onclick="window.location.href='/location4'">View More</button>
+                    </div>
+                </div>
+                <div class="spot" id="spot5">
+                    <img src="/images/vm3.jpg" alt="Location 5" class="spot-img">
+                    <div class="spot-overlay">
+                        <h3>Victoria Memorial</h3>
+                        <p>This has been the top pick for tourist since a decade now...</p>
+                        <button onclick="window.location.href='/location5'">View More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="ai-itinerary"> 
+        <section class="tour-planner">
+            <h2>Create Your <span>AI</span> based Tour Itinerary</h2>
+            <form id="tourForm" action="/generate-itinerary" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+                
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+                
+                <label for="preferredPlaces">Preferred Places (optional):</label>
+                <input type="text" id="preferredPlaces" name="preferredPlaces" placeholder="e.g., Howrah Bridge, Eco Park">
+                
+                <button type="submit">Generate Itinerary</button>
+            </form>
+        </section>
+    </section>
+
+        <section id="contact">
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="/send-message" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    </section>
+    <footer>
+        
+        <p>&copy; 2024 Ghumo Kolkata. All rights reserved.</p>
+        <p>Made with &hearts; by <a href="https://abanindra.vercel.app/">Abanindra</a></p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <a href="#" class="back-to-top"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAihJREFUSEulV+11wjAMPG0SNkk2oZNQJoFNYJNmEzd2TCxZkpX34E9L7ej0cXdKCd9+CEAKgpQ78mL+dnxUjPgP9dkA3TgWwDwFQuqTHGQoK244hBKnHA8q7iLP0RR4KK9mAt6fSYiEjPZfAXqUwRmHw9EYmRKwJuC5lXzvE+2v/wGYAszSutbGqDdYAbpwFvYzzu19HRMZcqYC1zsnyL0AeH9SZMDl0RmE10geMYBD4QQDuN09KlbNM5jEx2GPRiThAZfWzSmoOJxmJxt2f+kZzg1kTnXGStO6BU9Cyoz99ZMRBDCA23kFDhhDeCPRAqQJwGMjjda8HvUOzELzhE1ydfNbAVyYF2XwrIT8s3mUAeywujwjycULb4EqSYSOM2jW/0DfpUNVTvlZ+ZE65hXsvwtmdi4WEVOyuuuILyfgZ2tntj7p9zJAs1vNOF9OxUDKvNSAMmAGFvZtmwndNmu0mO47V9Exl1NjVQ1kuIgaB03VAafOAT1gTi5/j55xNFvXtGyFiRUp5cSXhOcMsWHLJ/f7QcXcMl2/973qONEeZLDaWxLfAGv67zp2nUt5tdW1ExVrMrAZDwxkSCJtLE4m0VpsgaZ9LRZJGOE9Vp15DSLir0q7ZUp5Xrc30hs3/VbOGTorKealcj9cj5UjK9tNI1d8bBtHl+6/EF164j3rWIvNnIIdfHqugfgdVvt0VV32295O5B1eZL8Wjf3gV6Deq1tkP07N5R+E3PYjN4YTggAAAABJRU5ErkJggg=="/></a>
+
+</body>
+</html>

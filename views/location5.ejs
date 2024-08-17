@@ -1,0 +1,51 @@
+<%- include('layout', { title: 'Victoria Memorial', content: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/location.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Victoria Memorial
+        </h1>
+        <h3><a href="https://victoriamemorial-cal.org/">Official Website</a></h3>
+        <p>The Victoria Memorial is a large marble building in Kolkata, India, dedicated to the memory of Queen Victoria. It is an iconic landmark of Kolkata, built between 1906 and 1921, and is surrounded by lush gardens. The memorial houses a museum with various exhibits related to the British Raj and Kolkata’s history.
+            The newly started night light and sound shows is a must watch from Tuesdays to Sundays!!
+
+        </p>
+
+        <!-- Photo gallery with rotating effect -->
+        <div class="photo-gallery">
+            <div class="photo-container">
+                <img src="/images/vm1.webp" alt="Victoria Memorial Photo 1">
+                <img src="/images/vm2.jpg" alt="Victoria Memorial Photo 2">
+                <img src="/images/vm3.jpg" alt="Victoria Memorial Photo 3">
+                <img src="/images/vm4.jpg" alt="Victoria Memorial Photo 4">
+            </div>
+        </div>
+
+        <section class="details">
+            <h2>Details</h2>
+            <ul>
+                <li><strong>Opening Hours:</strong> 10:00 AM - 6:00 PM</li>
+                <li><strong>Entry Ticket:</strong> ₹20 for Indians, ₹200 for foreigners</li>
+                <li><strong>Location:</strong> 1 Queen’s Way, Kolkata, West Bengal 700071, India</li>
+
+                <li><strong>Light and Sound Show:</strong> From 5:00 PM and Tickets @ INR100</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/js/scripts.js"></script> <!-- JavaScript for rotating effect -->
+</body>
+</html>
+
+` }) %>

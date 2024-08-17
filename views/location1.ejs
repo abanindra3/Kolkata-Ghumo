@@ -1,0 +1,51 @@
+<%- include('layout', { title: 'HOWRAH BRIDGE', content: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/location.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Howrah Bridge
+            
+        </h1>
+        <p>The Howrah Bridge is a balanced steel bridge over the Hooghly River in West Bengal, India. Commissioned in 1943, 
+            the bridge was originally named the New Howrah Bridge, because it replaced a pontoon bridge at the same location 
+            linking the twin cities of Howrah and Kolkata, which are located at the opposite banks of each other. On 14 June 1965, 
+            it was renamed Rabindra Setu after the Bengali poet Rabindranath Tagore, who was the first Indian and Asian Nobel laureate. It is still popularly known as the Howrah Bridge.  
+            Must respect the borders there
+        </p>
+
+        <!-- Photo gallery with rotating effect -->
+        <div class="photo-gallery">
+            <div class="photo-container">
+                <img src="/images/howrahnav.jpeg " alt="Victoria Memorial Photo 1">
+                <img src="/images/kolkata.jpg" alt="Victoria Memorial Photo 2">
+                <img src="/images/howrahnav.jpg" alt="Victoria Memorial Photo 3">
+                <img src="/images/kolkata.jpg" alt="Victoria Memorial Photo 4">
+            </div>
+        </div>
+
+        <section class="details">
+            <h2>Details</h2>
+            <ul>
+                <li><strong>Opening Hours:</strong> OPEN 24 HOURS</li>
+                <li><strong>OPENING YEAR:</strong> Opened in February 1943</li>
+                <li><strong>Location:</strong>  New Howrah Bridge Approach Rd, Kolkata (Calcutta) 700001 India</li>
+                <a href="https://www.google.co.in/maps/place/Howrah+Bridge/@22.5850384,88.3469648,17z/data=!3m1!4b1!4m6!3m5!1s0x3a0277bfbb1eeb1b:0xc9840aaa8c411199!8m2!3d22.5851433!4d88.3468005!16zL20vMDV0czV5?hl=en&entry=ttu">Direction Link</a>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/js/scripts.js"></script> <!-- JavaScript for rotating effect -->
+</body>
+</html>
+` }) %>

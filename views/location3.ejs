@@ -1,0 +1,43 @@
+<%- include('layout', { title: 'Victoria Memorial', content: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/location.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Lake Town</h1>
+        <p>Lake Town has excellent connectivity through bus to themain city, with 2 major bus stands on VIP Road and Jessore Road. Jessore road ensures easy access to the Kolkata Metro, as it connects Lake Town to Belgachia Metro Station, situated 3.9 Km (13 minutes) away. Lake Town is situated 8 km (30 minutes) from the Airport and the nearest local train station is Bidhannagar Road in Ultadanga, at 4 km (14 minutes) away. The proposed Kolkata monorail, scheduled for completion in 2021, will pass through the area, further improving its connectivity </p>
+
+        <!-- Photo gallery with rotating effect -->
+        <div class="photo-gallery">
+            <div class="photo-container">
+                <img src="/images/ltct1.jpeg"alt="ECO PARK Photo 1">
+                <img src="/images/ltct2.jpg" alt="ECO PARK Photo 2">
+                <img src="/images/ltct3.jpg" alt="ECO PARK Photo 3">
+                <img src="/images/ltct4.jpg" alt="ECO PARK Photo 4">
+            </div>
+        </div>
+
+        <section class="details">
+            <h2>Details</h2>
+            <ul>
+                <li><strong>Opening Hours:</strong> 10:00 AM - 5:00 PM</li>
+                
+                <a href="https://www.google.com/maps/dir//Lake+Town,+Kolkata,+West+Bengal/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x3a0275fe89b582a5:0x88401a0e7793a63e!3e0?sa=X&ved=1t:3747&ictx=111"><strong>Location Link</strong></a>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/js/scripts.js"></script> <!-- JavaScript for rotating effect -->
+</body>
+</html>
+` }) %>

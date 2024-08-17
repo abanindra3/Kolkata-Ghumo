@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            color: #fff;
+            background-color: #000;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 2px solid rgb(146, 67, 215);
+            padding-bottom: 10px;
+        }
+        .day-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid rgb(234, 240, 45);
+            border-radius: 10px;
+            background-color: #897474;
+            box-shadow: 0px 0px 15px #fff;
+            text-align: center;
+        }
+        .day-box h2 {
+            color: rgb(87, 224, 190);
+            font-size: 24px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .details-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid rgb(234, 240, 45);
+            border-radius: 10px;
+            background-color: #4a4a4a;
+            box-shadow: 0px 0px 15px #fff;
+        }
+        .details-box p {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(87, 224, 190);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #fff;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: rgb(234, 240, 45);
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #5cb85c;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #fff;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #4cae4c;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Tour Itinerary</h1>
+        <p>Name: <%= itinerary.name %></p>
+        <a href="/" class="home-button">Home</a>
+
+    </header>
+    
+    <main>
+        <% itinerary.forEach(function(day) { %>
+            <div class="day-box">
+                <h2><%= day.day %></h2>
+            </div>
+            <div class="details-box">
+                <p><strong>Details:</strong> <%= day.details %></p>
+                <p><strong>Place:</strong> <%= day.place %></p>
+            </div>
+        <% }) %>
+    </main>
+
+    <form action="/download-itinerary" method="POST">
+        <input type="hidden" name="name" value="<%= itinerary.name %>">
+        <% itinerary.forEach(function(day, index) { %>
+            <input type="hidden" name="itinerary[<%= index %>][day]" value="<%= day.day %>">
+            <input type="hidden" name="itinerary[<%= index %>][details]" value="<%= day.details %>">
+            <input type="hidden" name="itinerary[<%= index %>][place]" value="<%= day.place %>">
+        <% }) %>
+        <button type="submit" class="home-button">Download Itinerary as PDF</button>
+    </form>
+    
+</body>
+</html>
