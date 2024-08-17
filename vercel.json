@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "kolkataGhumo",
+    "name": "ghumo-kolkata",
     "builds": [
        { "src": "index.js", "use": "@vercel/node" }
     ],
